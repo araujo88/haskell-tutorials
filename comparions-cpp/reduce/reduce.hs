@@ -1,1 +1,0 @@
-main = print $ foldr (+) 1 [1, 2, 3]
