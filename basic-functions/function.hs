@@ -13,6 +13,10 @@ sumTwoNumbers a b = a + b
 multiply :: Int -> Int -> Int
 multiply x y = x * y
 
+factorial :: Int -> Int
+factorial 1 = 1
+factorial n = n * factorial (n - 1)
+
 main :: IO ()
 main = do
   print (square (square 2))
@@ -21,3 +25,4 @@ main = do
   print (concatenateStrings "Hello, " "world!")
   let double = multiply 2
   print (double 10)
+  print (map factorial [1, 2, 3, 4, 5])
