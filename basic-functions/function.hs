@@ -14,7 +14,7 @@ multiply :: Int -> Int -> Int
 multiply x y = x * y
 
 factorial :: Int -> Int
-factorial 1 = 1
+factorial 0 = 1
 factorial n = n * factorial (n - 1)
 
 main :: IO ()
@@ -25,4 +25,4 @@ main = do
   print (concatenateStrings "Hello, " "world!")
   let double = multiply 2
   print (double 10)
-  print (map factorial [1, 2, 3, 4, 5])
+  print (map factorial [0, 1, 2, 3, 4, 5])
