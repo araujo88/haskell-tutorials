@@ -17,6 +17,10 @@ factorial :: Int -> Int
 factorial 0 = 1
 factorial n = n * factorial (n - 1)
 
+nand :: Bool -> Bool -> Bool
+nand True True = False
+nand _ _ = True
+
 main :: IO ()
 main = do
   print (square (square 2))
@@ -26,3 +30,5 @@ main = do
   let double = multiply 2
   print (double 10)
   print (map factorial [0, 1, 2, 3, 4, 5])
+  print (nand False False)
+  print (nand True True)
