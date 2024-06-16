@@ -21,6 +21,11 @@ nand :: Bool -> Bool -> Bool
 nand True True = False
 nand _ _ = True
 
+absVal :: Int -> Int
+absVal n
+  | n >= 0 = n
+  | otherwise = -n
+
 main :: IO ()
 main = do
   print (square (square 2))
@@ -32,3 +37,5 @@ main = do
   print (map factorial [0, 1, 2, 3, 4, 5])
   print (nand False False)
   print (nand True True)
+  print (absVal 1)
+  print (absVal (-1))
