@@ -15,7 +15,9 @@ multiply x y = x * y
 
 factorial :: Int -> Int
 factorial 0 = 1
-factorial n = n * factorial (n - 1)
+factorial n
+  | n < 0 = error "Factorial is not defined for negative numbers"
+  | otherwise = n * factorial (n - 1)
 
 nand :: Bool -> Bool -> Bool
 nand True True = False
@@ -44,3 +46,4 @@ main = do
   print (absVal 1)
   print (absVal (-1))
   print (listLength [31, 234, 21, 23, 1])
+  print (factorial (-1)) -- will throw an error
