@@ -26,6 +26,10 @@ absVal n
   | n >= 0 = n
   | otherwise = -n
 
+listLength :: [a] -> Int
+listLength [] = 0
+listLength list = 1 + listLength (tail list)
+
 main :: IO ()
 main = do
   print (square (square 2))
@@ -39,3 +43,4 @@ main = do
   print (nand True True)
   print (absVal 1)
   print (absVal (-1))
+  print (listLength [31, 234, 21, 23, 1])
